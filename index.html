@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17110f" />
+  <title>The Keshav Museum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading" class="loading"><span class="loader-mark">K.</span><p>Preparing the galleries</p></div>
+
+  <main id="museum">
+    <canvas id="scene"></canvas>
+
+    <section id="welcome" class="welcome">
+      <div class="welcome-top"><span>AN EXTRAORDINARY LIFE, IN ORDINARY DETAILS</span><span>EST. 2026</span></div>
+      <div class="welcome-center">
+        <p class="eyebrow">A PERSONAL MUSEUM</p>
+        <h1>The Keshav<br><em>Museum</em></h1>
+        <div class="fine-rule"></div>
+        <p class="welcome-note">A collection of moments, letters, photographs<br>and little things that make Keshav, Keshav.</p>
+        <button id="enterBtn" class="enter-btn">ENTER THE MUSEUM <span>↗</span></button>
+        <p class="enter-hint">BEST EXPERIENCED WITH HEADPHONES</p>
+      </div>
+      <div class="welcome-bottom"><span>CURATED WITH AFFECTION</span><span>MOVE WITH WASD · LOOK WITH MOUSE</span></div>
+    </section>
+
+    <section id="directory" class="directory hidden">
+      <div class="directory-head"><span>THE KESHAV MUSEUM</span><button id="closeDirectory" aria-label="Close directory">×</button></div>
+      <p class="eyebrow">MUSEUM DIRECTORY</p>
+      <h2>Where would you<br><em>like to go?</em></h2>
+      <button class="destination" data-room="hall"><span>00</span><strong>Central Hall</strong><small>THE HEART OF THE MUSEUM</small><b>↗</b></button>
+      <button class="destination" data-room="letters"><span>01</span><strong>Correspondence Room</strong><small>ELEVEN LETTERS, ELEVEN VOICES</small><b>↗</b></button>
+      <button class="destination" data-room="portraits"><span>02</span><strong>Portrait Gallery</strong><small>TWENTY-FIVE MOMENTS</small><b>↗</b></button>
+      <button class="destination" data-room="archive"><span>03</span><strong>Archive of Keshav</strong><small>THE DETAILS THAT STAY</small><b>↗</b></button>
+      <p class="directory-foot">You can return here from every gallery.</p>
+    </section>
+
+    <section id="exhibit" class="exhibit hidden" aria-live="polite">
+      <button id="closeExhibit" class="close-exhibit">CLOSE ×</button>
+      <div id="exhibitContent"></div>
+    </section>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-brand"><span class="brand-dot"></span> THE KESHAV MUSEUM</div>
+      <div class="hud-actions">
+        <button id="directoryBtn">DIRECTORY <span>⌘</span></button>
+        <button id="soundBtn" aria-label="Toggle ambient sound">SOUND: OFF</button>
+      </div>
+      <div class="hud-bottom"><span id="roomName">CENTRAL HALL</span><span>WASD MOVE&nbsp;&nbsp; · &nbsp;&nbsp;MOUSE LOOK&nbsp;&nbsp; · &nbsp;&nbsp;ESC PAUSE</span></div>
+      <div id="crosshair" class="crosshair"></div>
+      <div id="interactionHint" class="interaction-hint">CLICK TO EXPLORE</div>
+    </div>
+
+    <div id="pause" class="pause hidden">
+      <p class="eyebrow">THE MUSEUM IS PAUSED</p>
+      <h2>Take your<br><em>time.</em></h2>
+      <button id="resumeBtn" class="enter-btn">RETURN TO THE MUSEUM ↗</button>
+      <button id="pauseDirectory" class="text-btn">OPEN DIRECTORY</button>
+    </div>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
